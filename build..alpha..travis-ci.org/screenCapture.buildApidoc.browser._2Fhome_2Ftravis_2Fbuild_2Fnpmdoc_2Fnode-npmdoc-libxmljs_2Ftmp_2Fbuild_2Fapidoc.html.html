@@ -1,0 +1,2677 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/libxmljs/libxmljs">libxmljs (v0.18.4)</a>
+</h1>
+<h4>libxml bindings for v8 javascript engine</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.libxmljs">module libxmljs</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">libxmljs.</span>libxml_debug_enabled</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Comment">
+            function <span class="apidocSignatureSpan">libxmljs.</span>Comment
+            <span class="apidocSignatureSpan">(doc, content)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Document">
+            function <span class="apidocSignatureSpan">libxmljs.</span>Document
+            <span class="apidocSignatureSpan">(version, encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Element">
+            function <span class="apidocSignatureSpan">libxmljs.</span>Element
+            <span class="apidocSignatureSpan">(doc, name, content)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.SaxParser">
+            function <span class="apidocSignatureSpan">libxmljs.</span>SaxParser
+            <span class="apidocSignatureSpan">(callbacks)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.SaxPushParser">
+            function <span class="apidocSignatureSpan">libxmljs.</span>SaxPushParser
+            <span class="apidocSignatureSpan">(callbacks)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Text">
+            function <span class="apidocSignatureSpan">libxmljs.</span>Text
+            <span class="apidocSignatureSpan">(doc, content)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.memoryUsage">
+            function <span class="apidocSignatureSpan">libxmljs.</span>memoryUsage
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.nodeCount">
+            function <span class="apidocSignatureSpan">libxmljs.</span>nodeCount
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.parseHtml">
+            function <span class="apidocSignatureSpan">libxmljs.</span>parseHtml
+            <span class="apidocSignatureSpan">(string, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.parseHtmlFragment">
+            function <span class="apidocSignatureSpan">libxmljs.</span>parseHtmlFragment
+            <span class="apidocSignatureSpan">(string, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.parseHtmlString">
+            function <span class="apidocSignatureSpan">libxmljs.</span>parseHtmlString
+            <span class="apidocSignatureSpan">(string, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.parseXml">
+            function <span class="apidocSignatureSpan">libxmljs.</span>parseXml
+            <span class="apidocSignatureSpan">(string, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.parseXmlString">
+            function <span class="apidocSignatureSpan">libxmljs.</span>parseXmlString
+            <span class="apidocSignatureSpan">(string, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">libxmljs.</span>Comment.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">libxmljs.</span>Document.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">libxmljs.</span>Element.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">libxmljs.</span>Text.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">libxmljs.</span>bindings</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">libxmljs.</span>features</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">libxmljs.</span>sax_parser</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">libxmljs.</span>libxml_parser_version</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">libxmljs.</span>libxml_version</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">libxmljs.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.libxmljs.Comment">module libxmljs.Comment</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Comment.Comment">
+            function <span class="apidocSignatureSpan">libxmljs.</span>Comment
+            <span class="apidocSignatureSpan">(doc, content)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.libxmljs.Comment.prototype">module libxmljs.Comment.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Comment.prototype.text">
+            function <span class="apidocSignatureSpan">libxmljs.Comment.prototype.</span>text
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.libxmljs.Document">module libxmljs.Document</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Document.Document">
+            function <span class="apidocSignatureSpan">libxmljs.</span>Document
+            <span class="apidocSignatureSpan">(version, encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Document.fromHtml">
+            function <span class="apidocSignatureSpan">libxmljs.Document.</span>fromHtml
+            <span class="apidocSignatureSpan">(string, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Document.fromHtmlFragment">
+            function <span class="apidocSignatureSpan">libxmljs.Document.</span>fromHtmlFragment
+            <span class="apidocSignatureSpan">(string, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Document.fromHtmlString">
+            function <span class="apidocSignatureSpan">libxmljs.Document.</span>fromHtmlString
+            <span class="apidocSignatureSpan">(string, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Document.fromXml">
+            function <span class="apidocSignatureSpan">libxmljs.Document.</span>fromXml
+            <span class="apidocSignatureSpan">(string, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Document.fromXmlString">
+            function <span class="apidocSignatureSpan">libxmljs.Document.</span>fromXmlString
+            <span class="apidocSignatureSpan">(string, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.libxmljs.Document.prototype">module libxmljs.Document.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Document.prototype._encoding">
+            function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>_encoding
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Document.prototype._getDtd">
+            function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>_getDtd
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Document.prototype._rngValidate">
+            function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>_rngValidate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Document.prototype._root">
+            function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>_root
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Document.prototype._setDtd">
+            function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>_setDtd
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Document.prototype._toString">
+            function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>_toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Document.prototype._validate">
+            function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>_validate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Document.prototype._version">
+            function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>_version
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Document.prototype.child">
+            function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>child
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Document.prototype.childNodes">
+            function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>childNodes
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Document.prototype.encoding">
+            function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>encoding
+            <span class="apidocSignatureSpan">(encoding)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Document.prototype.find">
+            function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>find
+            <span class="apidocSignatureSpan">(xpath, ns_uri)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Document.prototype.get">
+            function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>get
+            <span class="apidocSignatureSpan">(xpath, ns_uri)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Document.prototype.getDtd">
+            function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>getDtd
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Document.prototype.namespaces">
+            function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>namespaces
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Document.prototype.node">
+            function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>node
+            <span class="apidocSignatureSpan">(name, content)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Document.prototype.rngValidate">
+            function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>rngValidate
+            <span class="apidocSignatureSpan">(rng)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Document.prototype.root">
+            function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>root
+            <span class="apidocSignatureSpan">(elem)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Document.prototype.setDtd">
+            function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>setDtd
+            <span class="apidocSignatureSpan">(name, ext, sys)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Document.prototype.toString">
+            function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>toString
+            <span class="apidocSignatureSpan">(formatted)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Document.prototype.type">
+            function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>type
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Document.prototype.validate">
+            function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>validate
+            <span class="apidocSignatureSpan">(xsd)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Document.prototype.version">
+            function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>version
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.libxmljs.Element">module libxmljs.Element</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Element.Element">
+            function <span class="apidocSignatureSpan">libxmljs.</span>Element
+            <span class="apidocSignatureSpan">(doc, name, content)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.libxmljs.Element.prototype">module libxmljs.Element.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Element.prototype._attr">
+            function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>_attr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Element.prototype.addCData">
+            function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>addCData
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Element.prototype.addChild">
+            function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>addChild
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Element.prototype.addNextSibling">
+            function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>addNextSibling
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Element.prototype.addPrevSibling">
+            function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>addPrevSibling
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Element.prototype.attr">
+            function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>attr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Element.prototype.attrs">
+            function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>attrs
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Element.prototype.cdata">
+            function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>cdata
+            <span class="apidocSignatureSpan">(content)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Element.prototype.child">
+            function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>child
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Element.prototype.childNodes">
+            function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>childNodes
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Element.prototype.defineNamespace">
+            function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>defineNamespace
+            <span class="apidocSignatureSpan">(prefix, href)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Element.prototype.find">
+            function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>find
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Element.prototype.get">
+            function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>get
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Element.prototype.name">
+            function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>name
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Element.prototype.nextElement">
+            function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>nextElement
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Element.prototype.node">
+            function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>node
+            <span class="apidocSignatureSpan">(name, content)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Element.prototype.path">
+            function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>path
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Element.prototype.prevElement">
+            function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>prevElement
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Element.prototype.replace">
+            function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>replace
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Element.prototype.text">
+            function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>text
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.libxmljs.Text">module libxmljs.Text</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Text.Text">
+            function <span class="apidocSignatureSpan">libxmljs.</span>Text
+            <span class="apidocSignatureSpan">(doc, content)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.libxmljs.Text.prototype">module libxmljs.Text.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Text.prototype.nextElement">
+            function <span class="apidocSignatureSpan">libxmljs.Text.prototype.</span>nextElement
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Text.prototype.prevElement">
+            function <span class="apidocSignatureSpan">libxmljs.Text.prototype.</span>prevElement
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Text.prototype.replace">
+            function <span class="apidocSignatureSpan">libxmljs.Text.prototype.</span>replace
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.Text.prototype.text">
+            function <span class="apidocSignatureSpan">libxmljs.Text.prototype.</span>text
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.libxmljs.bindings">module libxmljs.bindings</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">libxmljs.bindings.</span>libxml_debug_enabled</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.bindings.Attribute">
+            function <span class="apidocSignatureSpan">libxmljs.bindings.</span>Attribute
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.bindings.Comment">
+            function <span class="apidocSignatureSpan">libxmljs.bindings.</span>Comment
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.bindings.Document">
+            function <span class="apidocSignatureSpan">libxmljs.bindings.</span>Document
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.bindings.Element">
+            function <span class="apidocSignatureSpan">libxmljs.bindings.</span>Element
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.bindings.Namespace">
+            function <span class="apidocSignatureSpan">libxmljs.bindings.</span>Namespace
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.bindings.SaxParser">
+            function <span class="apidocSignatureSpan">libxmljs.bindings.</span>SaxParser
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.bindings.SaxPushParser">
+            function <span class="apidocSignatureSpan">libxmljs.bindings.</span>SaxPushParser
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.bindings.Text">
+            function <span class="apidocSignatureSpan">libxmljs.bindings.</span>Text
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.bindings.fromHtml">
+            function <span class="apidocSignatureSpan">libxmljs.bindings.</span>fromHtml
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.bindings.fromXml">
+            function <span class="apidocSignatureSpan">libxmljs.bindings.</span>fromXml
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.bindings.xmlMemUsed">
+            function <span class="apidocSignatureSpan">libxmljs.bindings.</span>xmlMemUsed
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.bindings.xmlNodeCount">
+            function <span class="apidocSignatureSpan">libxmljs.bindings.</span>xmlNodeCount
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">libxmljs.bindings.</span>features</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">libxmljs.bindings.</span>libxml</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">libxmljs.bindings.</span>libxml_parser_version</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">libxmljs.bindings.</span>libxml_version</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">libxmljs.bindings.</span>path</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.libxmljs.sax_parser">module libxmljs.sax_parser</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.sax_parser.SaxParser">
+            function <span class="apidocSignatureSpan">libxmljs.sax_parser.</span>SaxParser
+            <span class="apidocSignatureSpan">(callbacks)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.libxmljs.sax_parser.SaxPushParser">
+            function <span class="apidocSignatureSpan">libxmljs.sax_parser.</span>SaxPushParser
+            <span class="apidocSignatureSpan">(callbacks)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.libxmljs" id="apidoc.module.libxmljs">module libxmljs</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Comment" id="apidoc.element.libxmljs.Comment">
+        function <span class="apidocSignatureSpan">libxmljs.</span>Comment
+        <span class="apidocSignatureSpan">(doc, content)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Comment = function (doc, content) {
+    if (!doc) {
+        throw new Error('document argument required');
+    } else if (! (doc instanceof bindings.Document)) {
+        throw new Error('document argument must be an ' +
+                        'instance of Document');
+    }
+
+    return new bindings.Comment(doc, content);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Document" id="apidoc.element.libxmljs.Document">
+        function <span class="apidocSignatureSpan">libxmljs.</span>Document
+        <span class="apidocSignatureSpan">(version, encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Document(version, encoding) {
+    version = version || '1.0';
+    var doc = new bindings.Document(version);
+    doc.encoding(encoding || 'utf8');
+    return doc;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Element" id="apidoc.element.libxmljs.Element">
+        function <span class="apidocSignatureSpan">libxmljs.</span>Element
+        <span class="apidocSignatureSpan">(doc, name, content)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Element(doc, name, content) {
+    if (!doc) {
+        throw new Error('document argument required');
+    } else if (! (doc instanceof bindings.Document)) {
+        throw new Error('document argument must be an ' +
+                        'instance of Document');
+    } else if (!name) {
+        throw new Error('name argument required');
+    }
+
+    return new bindings.Element(doc, name, content);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.SaxParser" id="apidoc.element.libxmljs.SaxParser">
+        function <span class="apidocSignatureSpan">libxmljs.</span>SaxParser
+        <span class="apidocSignatureSpan">(callbacks)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">SaxParser = function (callbacks) {
+    var parser = new bindings.SaxParser();
+
+    // attach callbacks
+    for (var callback in callbacks) {
+        parser.on(callback, callbacks[callback]);
+    }
+
+    return parser;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+var events = require('events');
+
+var bindings = require('./bindings');
+
+var SaxParser = function(callbacks) {
+var parser = new bindings.<span class="apidocCodeKeywordSpan">SaxParser</span>();
+
+// attach callbacks
+for (var callback in callbacks) {
+    parser.on(callback, callbacks[callback]);
+}
+
+return parser;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.SaxPushParser" id="apidoc.element.libxmljs.SaxPushParser">
+        function <span class="apidocSignatureSpan">libxmljs.</span>SaxPushParser
+        <span class="apidocSignatureSpan">(callbacks)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">SaxPushParser = function (callbacks) {
+    var parser = new bindings.SaxPushParser();
+
+    // attach callbacks
+    for (var callback in callbacks) {
+        parser.on(callback, callbacks[callback]);
+    }
+
+    return parser;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+// Overriding the prototype, like util.inherit, wipes out the native binding.
+// Copy over the methods instead.
+for (var k in events.EventEmitter.prototype)
+bindings.SaxParser.prototype[k] = events.EventEmitter.prototype[k];
+
+var SaxPushParser = function(callbacks) {
+var parser = new bindings.<span class="apidocCodeKeywordSpan">SaxPushParser</span>();
+
+// attach callbacks
+for (var callback in callbacks) {
+    parser.on(callback, callbacks[callback]);
+}
+
+return parser;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Text" id="apidoc.element.libxmljs.Text">
+        function <span class="apidocSignatureSpan">libxmljs.</span>Text
+        <span class="apidocSignatureSpan">(doc, content)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Text(doc, content) {
+    if (!doc) {
+        throw new Error('document argument required');
+    }
+
+    if (!(doc instanceof bindings.Document)) {
+        throw new Error('document argument must be an instance of Document');
+    }
+
+    if (!content) {
+        throw new Error('content argument required');
+    }
+
+    return new bindings.Text(doc, content);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.memoryUsage" id="apidoc.element.libxmljs.memoryUsage">
+        function <span class="apidocSignatureSpan">libxmljs.</span>memoryUsage
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function xmlMemUsed() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.nodeCount" id="apidoc.element.libxmljs.nodeCount">
+        function <span class="apidocSignatureSpan">libxmljs.</span>nodeCount
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function xmlNodeCount() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.parseHtml" id="apidoc.element.libxmljs.parseHtml">
+        function <span class="apidocSignatureSpan">libxmljs.</span>parseHtml
+        <span class="apidocSignatureSpan">(string, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parseHtml = function (string, opts) {
+    opts = opts || {};
+
+    // if for some reason user did not specify an object for the options
+    if (typeof(opts) !== 'object') {
+        throw new Error('fromHtml options must be an object');
+    }
+
+    return bindings.fromHtml(string, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.parseHtmlFragment" id="apidoc.element.libxmljs.parseHtmlFragment">
+        function <span class="apidocSignatureSpan">libxmljs.</span>parseHtmlFragment
+        <span class="apidocSignatureSpan">(string, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parseHtmlFragment = function (string, opts) {
+    opts = opts || {};
+
+    // if for some reason user did not specify an object for the options
+    if (typeof(opts) !== 'object') {
+        throw new Error('fromHtmlFragment options must be an object');
+    }
+
+    opts.doctype = false;
+    opts.implied = false;
+
+    return bindings.fromHtml(string, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.parseHtmlString" id="apidoc.element.libxmljs.parseHtmlString">
+        function <span class="apidocSignatureSpan">libxmljs.</span>parseHtmlString
+        <span class="apidocSignatureSpan">(string, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parseHtmlString = function (string, opts) {
+    opts = opts || {};
+
+    // if for some reason user did not specify an object for the options
+    if (typeof(opts) !== 'object') {
+        throw new Error('fromHtml options must be an object');
+    }
+
+    return bindings.fromHtml(string, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.parseXml" id="apidoc.element.libxmljs.parseXml">
+        function <span class="apidocSignatureSpan">libxmljs.</span>parseXml
+        <span class="apidocSignatureSpan">(string, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parseXml = function (string, options) {
+    return bindings.fromXml(string, options || {});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+           '&lt;root&gt;' +
+               '&lt;child foo="bar"&gt;' +
+                   '&lt;grandchild baz="fizbuzz"&gt;grandchild content&lt;/grandchild&gt;' +
+               '&lt;/child&gt;' +
+               '&lt;sibling&gt;with content!&lt;/sibling&gt;' +
+           '&lt;/root&gt;';
+
+var xmlDoc = libxmljs.<span class="apidocCodeKeywordSpan">parseXml</span>(xml);
+
+// xpath queries
+var gchild = xmlDoc.get('//grandchild');
+
+console.log(gchild.text());  // prints "grandchild content"
+
+var children = xmlDoc.root().childNodes();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.parseXmlString" id="apidoc.element.libxmljs.parseXmlString">
+        function <span class="apidocSignatureSpan">libxmljs.</span>parseXmlString
+        <span class="apidocSignatureSpan">(string, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parseXmlString = function (string, options) {
+    return bindings.fromXml(string, options || {});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.libxmljs.Comment" id="apidoc.module.libxmljs.Comment">module libxmljs.Comment</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Comment.Comment" id="apidoc.element.libxmljs.Comment.Comment">
+        function <span class="apidocSignatureSpan">libxmljs.</span>Comment
+        <span class="apidocSignatureSpan">(doc, content)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Comment = function (doc, content) {
+    if (!doc) {
+        throw new Error('document argument required');
+    } else if (! (doc instanceof bindings.Document)) {
+        throw new Error('document argument must be an ' +
+                        'instance of Document');
+    }
+
+    return new bindings.Comment(doc, content);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.libxmljs.Comment.prototype" id="apidoc.module.libxmljs.Comment.prototype">module libxmljs.Comment.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Comment.prototype.text" id="apidoc.element.libxmljs.Comment.prototype.text">
+        function <span class="apidocSignatureSpan">libxmljs.Comment.prototype.</span>text
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function text() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+           '&lt;/root&gt;';
+
+var xmlDoc = libxmljs.parseXml(xml);
+
+// xpath queries
+var gchild = xmlDoc.get('//grandchild');
+
+console.log(gchild.<span class="apidocCodeKeywordSpan">text</span>());  // prints "grandchild content"
+
+var children = xmlDoc.root().childNodes();
+var child = children[0];
+
+console.log(child.attr('foo').value()); // prints "bar"
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.libxmljs.Document" id="apidoc.module.libxmljs.Document">module libxmljs.Document</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Document.Document" id="apidoc.element.libxmljs.Document.Document">
+        function <span class="apidocSignatureSpan">libxmljs.</span>Document
+        <span class="apidocSignatureSpan">(version, encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Document(version, encoding) {
+    version = version || '1.0';
+    var doc = new bindings.Document(version);
+    doc.encoding(encoding || 'utf8');
+    return doc;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Document.fromHtml" id="apidoc.element.libxmljs.Document.fromHtml">
+        function <span class="apidocSignatureSpan">libxmljs.Document.</span>fromHtml
+        <span class="apidocSignatureSpan">(string, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromHtml = function (string, opts) {
+    opts = opts || {};
+
+    // if for some reason user did not specify an object for the options
+    if (typeof(opts) !== 'object') {
+        throw new Error('fromHtml options must be an object');
+    }
+
+    return bindings.fromHtml(string, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Document.fromHtmlFragment" id="apidoc.element.libxmljs.Document.fromHtmlFragment">
+        function <span class="apidocSignatureSpan">libxmljs.Document.</span>fromHtmlFragment
+        <span class="apidocSignatureSpan">(string, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromHtmlFragment = function (string, opts) {
+    opts = opts || {};
+
+    // if for some reason user did not specify an object for the options
+    if (typeof(opts) !== 'object') {
+        throw new Error('fromHtmlFragment options must be an object');
+    }
+
+    opts.doctype = false;
+    opts.implied = false;
+
+    return bindings.fromHtml(string, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Document.fromHtmlString" id="apidoc.element.libxmljs.Document.fromHtmlString">
+        function <span class="apidocSignatureSpan">libxmljs.Document.</span>fromHtmlString
+        <span class="apidocSignatureSpan">(string, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromHtmlString = function (string, opts) {
+    opts = opts || {};
+
+    // if for some reason user did not specify an object for the options
+    if (typeof(opts) !== 'object') {
+        throw new Error('fromHtml options must be an object');
+    }
+
+    return bindings.fromHtml(string, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Document.fromXml" id="apidoc.element.libxmljs.Document.fromXml">
+        function <span class="apidocSignatureSpan">libxmljs.Document.</span>fromXml
+        <span class="apidocSignatureSpan">(string, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromXml = function (string, options) {
+    return bindings.fromXml(string, options || {});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Document.fromXmlString" id="apidoc.element.libxmljs.Document.fromXmlString">
+        function <span class="apidocSignatureSpan">libxmljs.Document.</span>fromXmlString
+        <span class="apidocSignatureSpan">(string, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fromXmlString = function (string, options) {
+    return bindings.fromXml(string, options || {});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.libxmljs.Document.prototype" id="apidoc.module.libxmljs.Document.prototype">module libxmljs.Document.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Document.prototype._encoding" id="apidoc.element.libxmljs.Document.prototype._encoding">
+        function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>_encoding
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _encoding() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Document.prototype._getDtd" id="apidoc.element.libxmljs.Document.prototype._getDtd">
+        function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>_getDtd
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _getDtd() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Document.prototype._rngValidate" id="apidoc.element.libxmljs.Document.prototype._rngValidate">
+        function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>_rngValidate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _rngValidate() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Document.prototype._root" id="apidoc.element.libxmljs.Document.prototype._root">
+        function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>_root
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _root() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Document.prototype._setDtd" id="apidoc.element.libxmljs.Document.prototype._setDtd">
+        function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>_setDtd
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _setDtd() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Document.prototype._toString" id="apidoc.element.libxmljs.Document.prototype._toString">
+        function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>_toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Document.prototype._validate" id="apidoc.element.libxmljs.Document.prototype._validate">
+        function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>_validate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _validate() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Document.prototype._version" id="apidoc.element.libxmljs.Document.prototype._version">
+        function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>_version
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _version() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Document.prototype.child" id="apidoc.element.libxmljs.Document.prototype.child">
+        function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>child
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">child = function (id) {
+    if (id === undefined || typeof id !== 'number') {
+        throw new Error('id argument required for #child');
+    }
+
+    assertRoot(this);
+
+    return this.root().child(id);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Document.prototype.childNodes" id="apidoc.element.libxmljs.Document.prototype.childNodes">
+        function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>childNodes
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">childNodes = function () {
+    assertRoot(this);
+
+    return this.root().childNodes();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var xmlDoc = libxmljs.parseXml(xml);
+
+// xpath queries
+var gchild = xmlDoc.get('//grandchild');
+
+console.log(gchild.text());  // prints "grandchild content"
+
+var children = xmlDoc.root().<span class="apidocCodeKeywordSpan">childNodes</span>();
+var child = children[0];
+
+console.log(child.attr('foo').value()); // prints "bar"
+```
+
+## Support
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Document.prototype.encoding" id="apidoc.element.libxmljs.Document.prototype.encoding">
+        function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>encoding
+        <span class="apidocSignatureSpan">(encoding)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">encoding = function (encoding) {
+    return this._encoding(encoding);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Document.prototype.find" id="apidoc.element.libxmljs.Document.prototype.find">
+        function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>find
+        <span class="apidocSignatureSpan">(xpath, ns_uri)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">find = function (xpath, ns_uri) {
+    assertRoot(this);
+
+    return this.root().find(xpath, ns_uri);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Document.prototype.get" id="apidoc.element.libxmljs.Document.prototype.get">
+        function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>get
+        <span class="apidocSignatureSpan">(xpath, ns_uri)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (xpath, ns_uri) {
+    assertRoot(this);
+
+    return this.root().get(xpath, ns_uri);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+               '&lt;/child&gt;' +
+               '&lt;sibling&gt;with content!&lt;/sibling&gt;' +
+           '&lt;/root&gt;';
+
+var xmlDoc = libxmljs.parseXml(xml);
+
+// xpath queries
+var gchild = xmlDoc.<span class="apidocCodeKeywordSpan">get</span>('//grandchild');
+
+console.log(gchild.text());  // prints "grandchild content"
+
+var children = xmlDoc.root().childNodes();
+var child = children[0];
+
+console.log(child.attr('foo').value()); // prints "bar"
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Document.prototype.getDtd" id="apidoc.element.libxmljs.Document.prototype.getDtd">
+        function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>getDtd
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDtd = function () {
+    return this._getDtd();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Document.prototype.namespaces" id="apidoc.element.libxmljs.Document.prototype.namespaces">
+        function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>namespaces
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">namespaces = function () {
+    assertRoot(this);
+
+    return this.root().namespaces();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Document.prototype.node" id="apidoc.element.libxmljs.Document.prototype.node">
+        function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>node
+        <span class="apidocSignatureSpan">(name, content)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">node = function (name, content) {
+    return this.root(Element(this, name, content));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Document.prototype.rngValidate" id="apidoc.element.libxmljs.Document.prototype.rngValidate">
+        function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>rngValidate
+        <span class="apidocSignatureSpan">(rng)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rngValidate = function (rng) {
+    return this._rngValidate(rng);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Document.prototype.root" id="apidoc.element.libxmljs.Document.prototype.root">
+        function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>root
+        <span class="apidocSignatureSpan">(elem)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">root = function (elem) {
+    return this._root(elem);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var xmlDoc = libxmljs.parseXml(xml);
+
+// xpath queries
+var gchild = xmlDoc.get('//grandchild');
+
+console.log(gchild.text());  // prints "grandchild content"
+
+var children = xmlDoc.<span class="apidocCodeKeywordSpan">root</span>().childNodes();
+var child = children[0];
+
+console.log(child.attr('foo').value()); // prints "bar"
+```
+
+## Support
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Document.prototype.setDtd" id="apidoc.element.libxmljs.Document.prototype.setDtd">
+        function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>setDtd
+        <span class="apidocSignatureSpan">(name, ext, sys)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setDtd = function (name, ext, sys) {
+    if (!name) {
+        throw new Error('Must pass in a DTD name');
+    } else if (typeof name !== 'string') {
+        throw new Error('Must pass in a valid DTD name');
+    }
+
+    var params = [name];
+    if (typeof ext !== 'undefined') {
+        params.push(ext);
+    }
+    if (ext &amp;&amp; typeof sys !== 'undefined') {
+        params.push(sys);
+    }
+
+    return this._setDtd.apply(this, params);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Document.prototype.toString" id="apidoc.element.libxmljs.Document.prototype.toString">
+        function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>toString
+        <span class="apidocSignatureSpan">(formatted)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function (formatted) {
+    return this._toString(formatted !== undefined ? formatted : true);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Document.prototype.type" id="apidoc.element.libxmljs.Document.prototype.type">
+        function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>type
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">type = function () {
+    return 'document';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Document.prototype.validate" id="apidoc.element.libxmljs.Document.prototype.validate">
+        function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>validate
+        <span class="apidocSignatureSpan">(xsd)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">validate = function (xsd) {
+    return this._validate(xsd);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Document.prototype.version" id="apidoc.element.libxmljs.Document.prototype.version">
+        function <span class="apidocSignatureSpan">libxmljs.Document.prototype.</span>version
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">version = function () {
+    return this._version();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.libxmljs.Element" id="apidoc.module.libxmljs.Element">module libxmljs.Element</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Element.Element" id="apidoc.element.libxmljs.Element.Element">
+        function <span class="apidocSignatureSpan">libxmljs.</span>Element
+        <span class="apidocSignatureSpan">(doc, name, content)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Element(doc, name, content) {
+    if (!doc) {
+        throw new Error('document argument required');
+    } else if (! (doc instanceof bindings.Document)) {
+        throw new Error('document argument must be an ' +
+                        'instance of Document');
+    } else if (!name) {
+        throw new Error('name argument required');
+    }
+
+    return new bindings.Element(doc, name, content);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.libxmljs.Element.prototype" id="apidoc.module.libxmljs.Element.prototype">module libxmljs.Element.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Element.prototype._attr" id="apidoc.element.libxmljs.Element.prototype._attr">
+        function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>_attr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _attr() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Element.prototype.addCData" id="apidoc.element.libxmljs.Element.prototype.addCData">
+        function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>addCData
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function addCData() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Element.prototype.addChild" id="apidoc.element.libxmljs.Element.prototype.addChild">
+        function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>addChild
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function addChild() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Element.prototype.addNextSibling" id="apidoc.element.libxmljs.Element.prototype.addNextSibling">
+        function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>addNextSibling
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function addNextSibling() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Element.prototype.addPrevSibling" id="apidoc.element.libxmljs.Element.prototype.addPrevSibling">
+        function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>addPrevSibling
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function addPrevSibling() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Element.prototype.attr" id="apidoc.element.libxmljs.Element.prototype.attr">
+        function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>attr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">attr = function () {
+    if (arguments.length === 1) {
+        var arg = arguments[0];
+        if (typeof arg === 'object') {
+            // object setter
+            // iterate keys/value to set attributes
+            for (var k in arg) {
+                this._attr(k, arg[k]);
+            };
+            return this;
+        } else if (typeof arg === 'string') {
+            // getter
+            return this._attr(arg);
+        }
+    } else if (arguments.length === 2) {
+        // 2 arg setter
+        var name = arguments[0];
+        var value = arguments[1];
+        this._attr(name, value);
+        return this;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var gchild = xmlDoc.get('//grandchild');
+
+console.log(gchild.text());  // prints "grandchild content"
+
+var children = xmlDoc.root().childNodes();
+var child = children[0];
+
+console.log(child.<span class="apidocCodeKeywordSpan">attr</span>('foo').value()); // prints "bar"
+```
+
+## Support
+
+* Docs - [http://github.com/libxmljs/libxmljs/wiki](http://github.com/libxmljs/libxmljs/wiki)
+* Mailing list - [http://groups.google.com/group/libxmljs](http://groups.google.com/group/libxmljs)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Element.prototype.attrs" id="apidoc.element.libxmljs.Element.prototype.attrs">
+        function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>attrs
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function attrs() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Element.prototype.cdata" id="apidoc.element.libxmljs.Element.prototype.cdata">
+        function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>cdata
+        <span class="apidocSignatureSpan">(content)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cdata = function (content) {
+  this.addCData(content);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Element.prototype.child" id="apidoc.element.libxmljs.Element.prototype.child">
+        function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>child
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function child() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Element.prototype.childNodes" id="apidoc.element.libxmljs.Element.prototype.childNodes">
+        function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>childNodes
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function childNodes() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var xmlDoc = libxmljs.parseXml(xml);
+
+// xpath queries
+var gchild = xmlDoc.get('//grandchild');
+
+console.log(gchild.text());  // prints "grandchild content"
+
+var children = xmlDoc.root().<span class="apidocCodeKeywordSpan">childNodes</span>();
+var child = children[0];
+
+console.log(child.attr('foo').value()); // prints "bar"
+```
+
+## Support
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Element.prototype.defineNamespace" id="apidoc.element.libxmljs.Element.prototype.defineNamespace">
+        function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>defineNamespace
+        <span class="apidocSignatureSpan">(prefix, href)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">defineNamespace = function (prefix, href) {
+    // if no prefix specified
+    if (!href) {
+        href = prefix;
+        prefix = null;
+    }
+    return new bindings.Namespace(this, prefix, href);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Element.prototype.find" id="apidoc.element.libxmljs.Element.prototype.find">
+        function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>find
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function find() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Element.prototype.get" id="apidoc.element.libxmljs.Element.prototype.get">
+        function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>get
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function () {
+    var res = this.find.apply(this, arguments);
+    if (res instanceof Array) {
+        return res[0];
+    } else {
+        return res;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+               '&lt;/child&gt;' +
+               '&lt;sibling&gt;with content!&lt;/sibling&gt;' +
+           '&lt;/root&gt;';
+
+var xmlDoc = libxmljs.parseXml(xml);
+
+// xpath queries
+var gchild = xmlDoc.<span class="apidocCodeKeywordSpan">get</span>('//grandchild');
+
+console.log(gchild.text());  // prints "grandchild content"
+
+var children = xmlDoc.root().childNodes();
+var child = children[0];
+
+console.log(child.attr('foo').value()); // prints "bar"
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Element.prototype.name" id="apidoc.element.libxmljs.Element.prototype.name">
+        function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>name
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function name() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Element.prototype.nextElement" id="apidoc.element.libxmljs.Element.prototype.nextElement">
+        function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>nextElement
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function nextElement() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Element.prototype.node" id="apidoc.element.libxmljs.Element.prototype.node">
+        function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>node
+        <span class="apidocSignatureSpan">(name, content)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">node = function (name, content) {
+    var elem = Element(this.doc(), name, content);
+    this.addChild(elem);
+    return elem;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Element.prototype.path" id="apidoc.element.libxmljs.Element.prototype.path">
+        function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>path
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function path() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Element.prototype.prevElement" id="apidoc.element.libxmljs.Element.prototype.prevElement">
+        function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>prevElement
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function prevElement() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Element.prototype.replace" id="apidoc.element.libxmljs.Element.prototype.replace">
+        function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>replace
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function replace() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Element.prototype.text" id="apidoc.element.libxmljs.Element.prototype.text">
+        function <span class="apidocSignatureSpan">libxmljs.Element.prototype.</span>text
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function text() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+           '&lt;/root&gt;';
+
+var xmlDoc = libxmljs.parseXml(xml);
+
+// xpath queries
+var gchild = xmlDoc.get('//grandchild');
+
+console.log(gchild.<span class="apidocCodeKeywordSpan">text</span>());  // prints "grandchild content"
+
+var children = xmlDoc.root().childNodes();
+var child = children[0];
+
+console.log(child.attr('foo').value()); // prints "bar"
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.libxmljs.Text" id="apidoc.module.libxmljs.Text">module libxmljs.Text</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Text.Text" id="apidoc.element.libxmljs.Text.Text">
+        function <span class="apidocSignatureSpan">libxmljs.</span>Text
+        <span class="apidocSignatureSpan">(doc, content)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Text(doc, content) {
+    if (!doc) {
+        throw new Error('document argument required');
+    }
+
+    if (!(doc instanceof bindings.Document)) {
+        throw new Error('document argument must be an instance of Document');
+    }
+
+    if (!content) {
+        throw new Error('content argument required');
+    }
+
+    return new bindings.Text(doc, content);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.libxmljs.Text.prototype" id="apidoc.module.libxmljs.Text.prototype">module libxmljs.Text.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Text.prototype.nextElement" id="apidoc.element.libxmljs.Text.prototype.nextElement">
+        function <span class="apidocSignatureSpan">libxmljs.Text.prototype.</span>nextElement
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function nextElement() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Text.prototype.prevElement" id="apidoc.element.libxmljs.Text.prototype.prevElement">
+        function <span class="apidocSignatureSpan">libxmljs.Text.prototype.</span>prevElement
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function prevElement() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Text.prototype.replace" id="apidoc.element.libxmljs.Text.prototype.replace">
+        function <span class="apidocSignatureSpan">libxmljs.Text.prototype.</span>replace
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function replace() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.Text.prototype.text" id="apidoc.element.libxmljs.Text.prototype.text">
+        function <span class="apidocSignatureSpan">libxmljs.Text.prototype.</span>text
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function text() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+           '&lt;/root&gt;';
+
+var xmlDoc = libxmljs.parseXml(xml);
+
+// xpath queries
+var gchild = xmlDoc.get('//grandchild');
+
+console.log(gchild.<span class="apidocCodeKeywordSpan">text</span>());  // prints "grandchild content"
+
+var children = xmlDoc.root().childNodes();
+var child = children[0];
+
+console.log(child.attr('foo').value()); // prints "bar"
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.libxmljs.bindings" id="apidoc.module.libxmljs.bindings">module libxmljs.bindings</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.bindings.Attribute" id="apidoc.element.libxmljs.bindings.Attribute">
+        function <span class="apidocSignatureSpan">libxmljs.bindings.</span>Attribute
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Attribute = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.bindings.Comment" id="apidoc.element.libxmljs.bindings.Comment">
+        function <span class="apidocSignatureSpan">libxmljs.bindings.</span>Comment
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Comment = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.bindings.Document" id="apidoc.element.libxmljs.bindings.Document">
+        function <span class="apidocSignatureSpan">libxmljs.bindings.</span>Document
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Document() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.bindings.Element" id="apidoc.element.libxmljs.bindings.Element">
+        function <span class="apidocSignatureSpan">libxmljs.bindings.</span>Element
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Element = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.bindings.Namespace" id="apidoc.element.libxmljs.bindings.Namespace">
+        function <span class="apidocSignatureSpan">libxmljs.bindings.</span>Namespace
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Namespace = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.bindings.SaxParser" id="apidoc.element.libxmljs.bindings.SaxParser">
+        function <span class="apidocSignatureSpan">libxmljs.bindings.</span>SaxParser
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">SaxParser = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+var events = require('events');
+
+var bindings = require('./bindings');
+
+var SaxParser = function(callbacks) {
+var parser = new bindings.<span class="apidocCodeKeywordSpan">SaxParser</span>();
+
+// attach callbacks
+for (var callback in callbacks) {
+    parser.on(callback, callbacks[callback]);
+}
+
+return parser;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.bindings.SaxPushParser" id="apidoc.element.libxmljs.bindings.SaxPushParser">
+        function <span class="apidocSignatureSpan">libxmljs.bindings.</span>SaxPushParser
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">SaxPushParser = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+// Overriding the prototype, like util.inherit, wipes out the native binding.
+// Copy over the methods instead.
+for (var k in events.EventEmitter.prototype)
+bindings.SaxParser.prototype[k] = events.EventEmitter.prototype[k];
+
+var SaxPushParser = function(callbacks) {
+var parser = new bindings.<span class="apidocCodeKeywordSpan">SaxPushParser</span>();
+
+// attach callbacks
+for (var callback in callbacks) {
+    parser.on(callback, callbacks[callback]);
+}
+
+return parser;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.bindings.Text" id="apidoc.element.libxmljs.bindings.Text">
+        function <span class="apidocSignatureSpan">libxmljs.bindings.</span>Text
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Text = function () { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.bindings.fromHtml" id="apidoc.element.libxmljs.bindings.fromHtml">
+        function <span class="apidocSignatureSpan">libxmljs.bindings.</span>fromHtml
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function fromHtml() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.bindings.fromXml" id="apidoc.element.libxmljs.bindings.fromXml">
+        function <span class="apidocSignatureSpan">libxmljs.bindings.</span>fromXml
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function fromXml() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.bindings.xmlMemUsed" id="apidoc.element.libxmljs.bindings.xmlMemUsed">
+        function <span class="apidocSignatureSpan">libxmljs.bindings.</span>xmlMemUsed
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function xmlMemUsed() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.bindings.xmlNodeCount" id="apidoc.element.libxmljs.bindings.xmlNodeCount">
+        function <span class="apidocSignatureSpan">libxmljs.bindings.</span>xmlNodeCount
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function xmlNodeCount() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.libxmljs.sax_parser" id="apidoc.module.libxmljs.sax_parser">module libxmljs.sax_parser</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.sax_parser.SaxParser" id="apidoc.element.libxmljs.sax_parser.SaxParser">
+        function <span class="apidocSignatureSpan">libxmljs.sax_parser.</span>SaxParser
+        <span class="apidocSignatureSpan">(callbacks)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">SaxParser = function (callbacks) {
+    var parser = new bindings.SaxParser();
+
+    // attach callbacks
+    for (var callback in callbacks) {
+        parser.on(callback, callbacks[callback]);
+    }
+
+    return parser;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+var events = require('events');
+
+var bindings = require('./bindings');
+
+var SaxParser = function(callbacks) {
+var parser = new bindings.<span class="apidocCodeKeywordSpan">SaxParser</span>();
+
+// attach callbacks
+for (var callback in callbacks) {
+    parser.on(callback, callbacks[callback]);
+}
+
+return parser;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.libxmljs.sax_parser.SaxPushParser" id="apidoc.element.libxmljs.sax_parser.SaxPushParser">
+        function <span class="apidocSignatureSpan">libxmljs.sax_parser.</span>SaxPushParser
+        <span class="apidocSignatureSpan">(callbacks)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">SaxPushParser = function (callbacks) {
+    var parser = new bindings.SaxPushParser();
+
+    // attach callbacks
+    for (var callback in callbacks) {
+        parser.on(callback, callbacks[callback]);
+    }
+
+    return parser;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+// Overriding the prototype, like util.inherit, wipes out the native binding.
+// Copy over the methods instead.
+for (var k in events.EventEmitter.prototype)
+bindings.SaxParser.prototype[k] = events.EventEmitter.prototype[k];
+
+var SaxPushParser = function(callbacks) {
+var parser = new bindings.<span class="apidocCodeKeywordSpan">SaxPushParser</span>();
+
+// attach callbacks
+for (var callback in callbacks) {
+    parser.on(callback, callbacks[callback]);
+}
+
+return parser;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
