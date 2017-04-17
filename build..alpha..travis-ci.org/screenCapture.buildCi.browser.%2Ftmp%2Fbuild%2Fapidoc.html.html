@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/libxmljs/libxmljs"
-
-    >libxmljs (v0.18.4)</a>
+    <a href="https://github.com/libxmljs/libxmljs">libxmljs (v0.18.4)</a>
 </h1>
 <h4>libxml bindings for v8 javascript engine</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.libxmljs">module libxmljs</a><ol>
 
@@ -2116,10 +2109,10 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">Comment = function (doc, content) {
     if (!doc) {
-        throw new Error(&#x27;document argument required&#x27;);
+        throw new Error('document argument required');
     } else if (! (doc instanceof bindings.Document)) {
-        throw new Error(&#x27;document argument must be an &#x27; +
-                        &#x27;instance of Document&#x27;);
+        throw new Error('document argument must be an ' +
+                        'instance of Document');
     }
 
     return new bindings.Comment(doc, content);
@@ -2150,9 +2143,9 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function Document(version, encoding) {
-    version = version || &#x27;1.0&#x27;;
+    version = version || '1.0';
     var doc = new bindings.Document(version);
-    doc.encoding(encoding || &#x27;utf8&#x27;);
+    doc.encoding(encoding || 'utf8');
     return doc;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -2272,8 +2265,8 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">Document.prototype.child = function (id) {
-    if (id === undefined || typeof id !== &#x27;number&#x27;) {
-        throw new Error(&#x27;id argument required for #child&#x27;);
+    if (id === undefined || typeof id !== 'number') {
+        throw new Error('id argument required for #child');
     }
 
     assertRoot(this);
@@ -2437,16 +2430,16 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">Document.prototype.setDtd = function (name, ext, sys) {
     if (!name) {
-        throw new Error(&#x27;Must pass in a DTD name&#x27;);
-    } else if (typeof name !== &#x27;string&#x27;) {
-        throw new Error(&#x27;Must pass in a valid DTD name&#x27;);
+        throw new Error('Must pass in a DTD name');
+    } else if (typeof name !== 'string') {
+        throw new Error('Must pass in a valid DTD name');
     }
 
     var params = [name];
-    if (typeof ext !== &#x27;undefined&#x27;) {
+    if (typeof ext !== 'undefined') {
         params.push(ext);
     }
-    if (ext &#x26;&#x26; typeof sys !== &#x27;undefined&#x27;) {
+    if (ext &amp;&amp; typeof sys !== 'undefined') {
         params.push(sys);
     }
 
@@ -2480,7 +2473,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">Document.prototype.type = function () {
-    return &#x27;document&#x27;;
+    return 'document';
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -2526,12 +2519,12 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function Element(doc, name, content) {
     if (!doc) {
-        throw new Error(&#x27;document argument required&#x27;);
+        throw new Error('document argument required');
     } else if (! (doc instanceof bindings.Document)) {
-        throw new Error(&#x27;document argument must be an &#x27; +
-                        &#x27;instance of Document&#x27;);
+        throw new Error('document argument must be an ' +
+                        'instance of Document');
     } else if (!name) {
-        throw new Error(&#x27;name argument required&#x27;);
+        throw new Error('name argument required');
     }
 
     return new bindings.Element(doc, name, content);
@@ -2616,14 +2609,14 @@
     <li>description and source-code<pre class="apidocCodePre">Element.prototype.attr = function () {
     if (arguments.length === 1) {
         var arg = arguments[0];
-        if (typeof arg === &#x27;object&#x27;) {
+        if (typeof arg === 'object') {
             // object setter
             // iterate keys/value to set attributes
             for (var k in arg) {
                 this._attr(k, arg[k]);
             };
             return this;
-        } else if (typeof arg === &#x27;string&#x27;) {
+        } else if (typeof arg === 'string') {
             // getter
             return this._attr(arg);
         }
@@ -2863,9 +2856,9 @@
     <li>example usage<pre class="apidocCodePre">...
 
 
-var events = require(&#x27;events&#x27;);
+var events = require('events');
 
-var bindings = require(&#x27;./bindings&#x27;);
+var bindings = require('./bindings');
 
 var SaxParser = function(callbacks) {
 var parser = new bindings.<span class="apidocCodeKeywordSpan">SaxParser</span>();
@@ -2928,15 +2921,15 @@ return parser;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function Text(doc, content) {
     if (!doc) {
-        throw new Error(&#x27;document argument required&#x27;);
+        throw new Error('document argument required');
     }
 
     if (!(doc instanceof bindings.Document)) {
-        throw new Error(&#x27;document argument must be an instance of Document&#x27;);
+        throw new Error('document argument must be an instance of Document');
     }
 
     if (!content) {
-        throw new Error(&#x27;content argument required&#x27;);
+        throw new Error('content argument required');
     }
 
     return new bindings.Text(doc, content);
@@ -3035,8 +3028,8 @@ return parser;
     opts = opts || {};
 
     // if for some reason user did not specify an object for the options
-    if (typeof(opts) !== &#x27;object&#x27;) {
-        throw new Error(&#x27;fromHtml options must be an object&#x27;);
+    if (typeof(opts) !== 'object') {
+        throw new Error('fromHtml options must be an object');
     }
 
     return bindings.fromHtml(string, opts);
@@ -3057,8 +3050,8 @@ return parser;
     opts = opts || {};
 
     // if for some reason user did not specify an object for the options
-    if (typeof(opts) !== &#x27;object&#x27;) {
-        throw new Error(&#x27;fromHtmlFragment options must be an object&#x27;);
+    if (typeof(opts) !== 'object') {
+        throw new Error('fromHtmlFragment options must be an object');
     }
 
     opts.doctype = false;
@@ -3082,8 +3075,8 @@ return parser;
     opts = opts || {};
 
     // if for some reason user did not specify an object for the options
-    if (typeof(opts) !== &#x27;object&#x27;) {
-        throw new Error(&#x27;fromHtml options must be an object&#x27;);
+    if (typeof(opts) !== 'object') {
+        throw new Error('fromHtml options must be an object');
     }
 
     return bindings.fromHtml(string, opts);
@@ -3104,19 +3097,19 @@ return parser;
     return bindings.fromXml(string, options || {});
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-           &#x27;&#x3c;root&#x3e;&#x27; +
-               &#x27;&#x3c;child foo=&#x22;bar&#x22;&#x3e;&#x27; +
-                   &#x27;&#x3c;grandchild baz=&#x22;fizbuzz&#x22;&#x3e;grandchild content&#x3c;/grandchild&#x3e;&#x27; +
-               &#x27;&#x3c;/child&#x3e;&#x27; +
-               &#x27;&#x3c;sibling&#x3e;with content!&#x3c;/sibling&#x3e;&#x27; +
-           &#x27;&#x3c;/root&#x3e;&#x27;;
+           '&lt;root&gt;' +
+               '&lt;child foo="bar"&gt;' +
+                   '&lt;grandchild baz="fizbuzz"&gt;grandchild content&lt;/grandchild&gt;' +
+               '&lt;/child&gt;' +
+               '&lt;sibling&gt;with content!&lt;/sibling&gt;' +
+           '&lt;/root&gt;';
 
 var xmlDoc = libxmljs.<span class="apidocCodeKeywordSpan">parseXml</span>(xml);
 
 // xpath queries
-var gchild = xmlDoc.get(&#x27;//grandchild&#x27;);
+var gchild = xmlDoc.get('//grandchild');
 
-console.log(gchild.text());  // prints &#x22;grandchild content&#x22;
+console.log(gchild.text());  // prints "grandchild content"
 
 var children = xmlDoc.root().childNodes();
 ...</pre></li>
@@ -3173,10 +3166,10 @@ var children = xmlDoc.root().childNodes();
     <ul>
     <li>description and source-code<pre class="apidocCodePre">Comment = function (doc, content) {
     if (!doc) {
-        throw new Error(&#x27;document argument required&#x27;);
+        throw new Error('document argument required');
     } else if (! (doc instanceof bindings.Document)) {
-        throw new Error(&#x27;document argument must be an &#x27; +
-                        &#x27;instance of Document&#x27;);
+        throw new Error('document argument must be an ' +
+                        'instance of Document');
     }
 
     return new bindings.Comment(doc, content);
@@ -3200,19 +3193,19 @@ var children = xmlDoc.root().childNodes();
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function text() { [native code] }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-           &#x27;&#x3c;/root&#x3e;&#x27;;
+           '&lt;/root&gt;';
 
 var xmlDoc = libxmljs.parseXml(xml);
 
 // xpath queries
-var gchild = xmlDoc.get(&#x27;//grandchild&#x27;);
+var gchild = xmlDoc.get('//grandchild');
 
-console.log(gchild.<span class="apidocCodeKeywordSpan">text</span>());  // prints &#x22;grandchild content&#x22;
+console.log(gchild.<span class="apidocCodeKeywordSpan">text</span>());  // prints "grandchild content"
 
 var children = xmlDoc.root().childNodes();
 var child = children[0];
 
-console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
+console.log(child.attr('foo').value()); // prints "bar"
 ```
 ...</pre></li>
     </ul>
@@ -3233,19 +3226,19 @@ console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function text() { [native code] }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-           &#x27;&#x3c;/root&#x3e;&#x27;;
+           '&lt;/root&gt;';
 
 var xmlDoc = libxmljs.parseXml(xml);
 
 // xpath queries
-var gchild = xmlDoc.get(&#x27;//grandchild&#x27;);
+var gchild = xmlDoc.get('//grandchild');
 
-console.log(gchild.<span class="apidocCodeKeywordSpan">text</span>());  // prints &#x22;grandchild content&#x22;
+console.log(gchild.<span class="apidocCodeKeywordSpan">text</span>());  // prints "grandchild content"
 
 var children = xmlDoc.root().childNodes();
 var child = children[0];
 
-console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
+console.log(child.attr('foo').value()); // prints "bar"
 ```
 ...</pre></li>
     </ul>
@@ -3265,9 +3258,9 @@ console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function Document(version, encoding) {
-    version = version || &#x27;1.0&#x27;;
+    version = version || '1.0';
     var doc = new bindings.Document(version);
-    doc.encoding(encoding || &#x27;utf8&#x27;);
+    doc.encoding(encoding || 'utf8');
     return doc;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -3286,8 +3279,8 @@ console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
     opts = opts || {};
 
     // if for some reason user did not specify an object for the options
-    if (typeof(opts) !== &#x27;object&#x27;) {
-        throw new Error(&#x27;fromHtml options must be an object&#x27;);
+    if (typeof(opts) !== 'object') {
+        throw new Error('fromHtml options must be an object');
     }
 
     return bindings.fromHtml(string, opts);
@@ -3308,8 +3301,8 @@ console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
     opts = opts || {};
 
     // if for some reason user did not specify an object for the options
-    if (typeof(opts) !== &#x27;object&#x27;) {
-        throw new Error(&#x27;fromHtmlFragment options must be an object&#x27;);
+    if (typeof(opts) !== 'object') {
+        throw new Error('fromHtmlFragment options must be an object');
     }
 
     opts.doctype = false;
@@ -3333,8 +3326,8 @@ console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
     opts = opts || {};
 
     // if for some reason user did not specify an object for the options
-    if (typeof(opts) !== &#x27;object&#x27;) {
-        throw new Error(&#x27;fromHtml options must be an object&#x27;);
+    if (typeof(opts) !== 'object') {
+        throw new Error('fromHtml options must be an object');
     }
 
     return bindings.fromHtml(string, opts);
@@ -3491,8 +3484,8 @@ console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">child = function (id) {
-    if (id === undefined || typeof id !== &#x27;number&#x27;) {
-        throw new Error(&#x27;id argument required for #child&#x27;);
+    if (id === undefined || typeof id !== 'number') {
+        throw new Error('id argument required for #child');
     }
 
     assertRoot(this);
@@ -3520,14 +3513,14 @@ console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
 var xmlDoc = libxmljs.parseXml(xml);
 
 // xpath queries
-var gchild = xmlDoc.get(&#x27;//grandchild&#x27;);
+var gchild = xmlDoc.get('//grandchild');
 
-console.log(gchild.text());  // prints &#x22;grandchild content&#x22;
+console.log(gchild.text());  // prints "grandchild content"
 
 var children = xmlDoc.root().<span class="apidocCodeKeywordSpan">childNodes</span>();
 var child = children[0];
 
-console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
+console.log(child.attr('foo').value()); // prints "bar"
 ```
 
 ## Support
@@ -3581,21 +3574,21 @@ console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
     return this.root().get(xpath, ns_uri);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-               &#x27;&#x3c;/child&#x3e;&#x27; +
-               &#x27;&#x3c;sibling&#x3e;with content!&#x3c;/sibling&#x3e;&#x27; +
-           &#x27;&#x3c;/root&#x3e;&#x27;;
+               '&lt;/child&gt;' +
+               '&lt;sibling&gt;with content!&lt;/sibling&gt;' +
+           '&lt;/root&gt;';
 
 var xmlDoc = libxmljs.parseXml(xml);
 
 // xpath queries
-var gchild = xmlDoc.<span class="apidocCodeKeywordSpan">get</span>(&#x27;//grandchild&#x27;);
+var gchild = xmlDoc.<span class="apidocCodeKeywordSpan">get</span>('//grandchild');
 
-console.log(gchild.text());  // prints &#x22;grandchild content&#x22;
+console.log(gchild.text());  // prints "grandchild content"
 
 var children = xmlDoc.root().childNodes();
 var child = children[0];
 
-console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
+console.log(child.attr('foo').value()); // prints "bar"
 ...</pre></li>
     </ul>
 
@@ -3677,14 +3670,14 @@ console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
 var xmlDoc = libxmljs.parseXml(xml);
 
 // xpath queries
-var gchild = xmlDoc.get(&#x27;//grandchild&#x27;);
+var gchild = xmlDoc.get('//grandchild');
 
-console.log(gchild.text());  // prints &#x22;grandchild content&#x22;
+console.log(gchild.text());  // prints "grandchild content"
 
 var children = xmlDoc.<span class="apidocCodeKeywordSpan">root</span>().childNodes();
 var child = children[0];
 
-console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
+console.log(child.attr('foo').value()); // prints "bar"
 ```
 
 ## Support
@@ -3702,16 +3695,16 @@ console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setDtd = function (name, ext, sys) {
     if (!name) {
-        throw new Error(&#x27;Must pass in a DTD name&#x27;);
-    } else if (typeof name !== &#x27;string&#x27;) {
-        throw new Error(&#x27;Must pass in a valid DTD name&#x27;);
+        throw new Error('Must pass in a DTD name');
+    } else if (typeof name !== 'string') {
+        throw new Error('Must pass in a valid DTD name');
     }
 
     var params = [name];
-    if (typeof ext !== &#x27;undefined&#x27;) {
+    if (typeof ext !== 'undefined') {
         params.push(ext);
     }
-    if (ext &#x26;&#x26; typeof sys !== &#x27;undefined&#x27;) {
+    if (ext &amp;&amp; typeof sys !== 'undefined') {
         params.push(sys);
     }
 
@@ -3745,7 +3738,7 @@ console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">type = function () {
-    return &#x27;document&#x27;;
+    return 'document';
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3939,8 +3932,8 @@ console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">child = function (id) {
-    if (id === undefined || typeof id !== &#x27;number&#x27;) {
-        throw new Error(&#x27;id argument required for #child&#x27;);
+    if (id === undefined || typeof id !== 'number') {
+        throw new Error('id argument required for #child');
     }
 
     assertRoot(this);
@@ -3973,14 +3966,14 @@ console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
 var xmlDoc = libxmljs.parseXml(xml);
 
 // xpath queries
-var gchild = xmlDoc.get(&#x27;//grandchild&#x27;);
+var gchild = xmlDoc.get('//grandchild');
 
-console.log(gchild.text());  // prints &#x22;grandchild content&#x22;
+console.log(gchild.text());  // prints "grandchild content"
 
 var children = xmlDoc.root().<span class="apidocCodeKeywordSpan">childNodes</span>();
 var child = children[0];
 
-console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
+console.log(child.attr('foo').value()); // prints "bar"
 ```
 
 ## Support
@@ -4049,21 +4042,21 @@ console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
     return this.root().get(xpath, ns_uri);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-               &#x27;&#x3c;/child&#x3e;&#x27; +
-               &#x27;&#x3c;sibling&#x3e;with content!&#x3c;/sibling&#x3e;&#x27; +
-           &#x27;&#x3c;/root&#x3e;&#x27;;
+               '&lt;/child&gt;' +
+               '&lt;sibling&gt;with content!&lt;/sibling&gt;' +
+           '&lt;/root&gt;';
 
 var xmlDoc = libxmljs.parseXml(xml);
 
 // xpath queries
-var gchild = xmlDoc.<span class="apidocCodeKeywordSpan">get</span>(&#x27;//grandchild&#x27;);
+var gchild = xmlDoc.<span class="apidocCodeKeywordSpan">get</span>('//grandchild');
 
-console.log(gchild.text());  // prints &#x22;grandchild content&#x22;
+console.log(gchild.text());  // prints "grandchild content"
 
 var children = xmlDoc.root().childNodes();
 var child = children[0];
 
-console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
+console.log(child.attr('foo').value()); // prints "bar"
 ...</pre></li>
     </ul>
 
@@ -4170,14 +4163,14 @@ console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
 var xmlDoc = libxmljs.parseXml(xml);
 
 // xpath queries
-var gchild = xmlDoc.get(&#x27;//grandchild&#x27;);
+var gchild = xmlDoc.get('//grandchild');
 
-console.log(gchild.text());  // prints &#x22;grandchild content&#x22;
+console.log(gchild.text());  // prints "grandchild content"
 
 var children = xmlDoc.<span class="apidocCodeKeywordSpan">root</span>().childNodes();
 var child = children[0];
 
-console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
+console.log(child.attr('foo').value()); // prints "bar"
 ```
 
 ## Support
@@ -4200,16 +4193,16 @@ console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">setDtd = function (name, ext, sys) {
     if (!name) {
-        throw new Error(&#x27;Must pass in a DTD name&#x27;);
-    } else if (typeof name !== &#x27;string&#x27;) {
-        throw new Error(&#x27;Must pass in a valid DTD name&#x27;);
+        throw new Error('Must pass in a DTD name');
+    } else if (typeof name !== 'string') {
+        throw new Error('Must pass in a valid DTD name');
     }
 
     var params = [name];
-    if (typeof ext !== &#x27;undefined&#x27;) {
+    if (typeof ext !== 'undefined') {
         params.push(ext);
     }
-    if (ext &#x26;&#x26; typeof sys !== &#x27;undefined&#x27;) {
+    if (ext &amp;&amp; typeof sys !== 'undefined') {
         params.push(sys);
     }
 
@@ -4251,7 +4244,7 @@ console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">type = function () {
-    return &#x27;document&#x27;;
+    return 'document';
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -4312,12 +4305,12 @@ console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function Element(doc, name, content) {
     if (!doc) {
-        throw new Error(&#x27;document argument required&#x27;);
+        throw new Error('document argument required');
     } else if (! (doc instanceof bindings.Document)) {
-        throw new Error(&#x27;document argument must be an &#x27; +
-                        &#x27;instance of Document&#x27;);
+        throw new Error('document argument must be an ' +
+                        'instance of Document');
     } else if (!name) {
-        throw new Error(&#x27;name argument required&#x27;);
+        throw new Error('name argument required');
     }
 
     return new bindings.Element(doc, name, content);
@@ -4407,14 +4400,14 @@ console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
     <li>description and source-code<pre class="apidocCodePre">attr = function () {
     if (arguments.length === 1) {
         var arg = arguments[0];
-        if (typeof arg === &#x27;object&#x27;) {
+        if (typeof arg === 'object') {
             // object setter
             // iterate keys/value to set attributes
             for (var k in arg) {
                 this._attr(k, arg[k]);
             };
             return this;
-        } else if (typeof arg === &#x27;string&#x27;) {
+        } else if (typeof arg === 'string') {
             // getter
             return this._attr(arg);
         }
@@ -4427,14 +4420,14 @@ console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
     }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-var gchild = xmlDoc.get(&#x27;//grandchild&#x27;);
+var gchild = xmlDoc.get('//grandchild');
 
-console.log(gchild.text());  // prints &#x22;grandchild content&#x22;
+console.log(gchild.text());  // prints "grandchild content"
 
 var children = xmlDoc.root().childNodes();
 var child = children[0];
 
-console.log(child.<span class="apidocCodeKeywordSpan">attr</span>(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
+console.log(child.<span class="apidocCodeKeywordSpan">attr</span>('foo').value()); // prints "bar"
 ```
 
 ## Support
@@ -4500,14 +4493,14 @@ console.log(child.<span class="apidocCodeKeywordSpan">attr</span>(&#x27;foo&#x27
 var xmlDoc = libxmljs.parseXml(xml);
 
 // xpath queries
-var gchild = xmlDoc.get(&#x27;//grandchild&#x27;);
+var gchild = xmlDoc.get('//grandchild');
 
-console.log(gchild.text());  // prints &#x22;grandchild content&#x22;
+console.log(gchild.text());  // prints "grandchild content"
 
 var children = xmlDoc.root().<span class="apidocCodeKeywordSpan">childNodes</span>();
 var child = children[0];
 
-console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
+console.log(child.attr('foo').value()); // prints "bar"
 ```
 
 ## Support
@@ -4565,21 +4558,21 @@ console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
     }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-               &#x27;&#x3c;/child&#x3e;&#x27; +
-               &#x27;&#x3c;sibling&#x3e;with content!&#x3c;/sibling&#x3e;&#x27; +
-           &#x27;&#x3c;/root&#x3e;&#x27;;
+               '&lt;/child&gt;' +
+               '&lt;sibling&gt;with content!&lt;/sibling&gt;' +
+           '&lt;/root&gt;';
 
 var xmlDoc = libxmljs.parseXml(xml);
 
 // xpath queries
-var gchild = xmlDoc.<span class="apidocCodeKeywordSpan">get</span>(&#x27;//grandchild&#x27;);
+var gchild = xmlDoc.<span class="apidocCodeKeywordSpan">get</span>('//grandchild');
 
-console.log(gchild.text());  // prints &#x22;grandchild content&#x22;
+console.log(gchild.text());  // prints "grandchild content"
 
 var children = xmlDoc.root().childNodes();
 var child = children[0];
 
-console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
+console.log(child.attr('foo').value()); // prints "bar"
 ...</pre></li>
     </ul>
 
@@ -4676,19 +4669,19 @@ console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function text() { [native code] }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-           &#x27;&#x3c;/root&#x3e;&#x27;;
+           '&lt;/root&gt;';
 
 var xmlDoc = libxmljs.parseXml(xml);
 
 // xpath queries
-var gchild = xmlDoc.get(&#x27;//grandchild&#x27;);
+var gchild = xmlDoc.get('//grandchild');
 
-console.log(gchild.<span class="apidocCodeKeywordSpan">text</span>());  // prints &#x22;grandchild content&#x22;
+console.log(gchild.<span class="apidocCodeKeywordSpan">text</span>());  // prints "grandchild content"
 
 var children = xmlDoc.root().childNodes();
 var child = children[0];
 
-console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
+console.log(child.attr('foo').value()); // prints "bar"
 ```
 ...</pre></li>
     </ul>
@@ -4800,14 +4793,14 @@ console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
     <li>description and source-code<pre class="apidocCodePre">attr = function () {
     if (arguments.length === 1) {
         var arg = arguments[0];
-        if (typeof arg === &#x27;object&#x27;) {
+        if (typeof arg === 'object') {
             // object setter
             // iterate keys/value to set attributes
             for (var k in arg) {
                 this._attr(k, arg[k]);
             };
             return this;
-        } else if (typeof arg === &#x27;string&#x27;) {
+        } else if (typeof arg === 'string') {
             // getter
             return this._attr(arg);
         }
@@ -4820,14 +4813,14 @@ console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
     }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-var gchild = xmlDoc.get(&#x27;//grandchild&#x27;);
+var gchild = xmlDoc.get('//grandchild');
 
-console.log(gchild.text());  // prints &#x22;grandchild content&#x22;
+console.log(gchild.text());  // prints "grandchild content"
 
 var children = xmlDoc.root().childNodes();
 var child = children[0];
 
-console.log(child.<span class="apidocCodeKeywordSpan">attr</span>(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
+console.log(child.<span class="apidocCodeKeywordSpan">attr</span>('foo').value()); // prints "bar"
 ```
 
 ## Support
@@ -4913,14 +4906,14 @@ console.log(child.<span class="apidocCodeKeywordSpan">attr</span>(&#x27;foo&#x27
 var xmlDoc = libxmljs.parseXml(xml);
 
 // xpath queries
-var gchild = xmlDoc.get(&#x27;//grandchild&#x27;);
+var gchild = xmlDoc.get('//grandchild');
 
-console.log(gchild.text());  // prints &#x22;grandchild content&#x22;
+console.log(gchild.text());  // prints "grandchild content"
 
 var children = xmlDoc.root().<span class="apidocCodeKeywordSpan">childNodes</span>();
 var child = children[0];
 
-console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
+console.log(child.attr('foo').value()); // prints "bar"
 ```
 
 ## Support
@@ -4993,21 +4986,21 @@ console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
     }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-               &#x27;&#x3c;/child&#x3e;&#x27; +
-               &#x27;&#x3c;sibling&#x3e;with content!&#x3c;/sibling&#x3e;&#x27; +
-           &#x27;&#x3c;/root&#x3e;&#x27;;
+               '&lt;/child&gt;' +
+               '&lt;sibling&gt;with content!&lt;/sibling&gt;' +
+           '&lt;/root&gt;';
 
 var xmlDoc = libxmljs.parseXml(xml);
 
 // xpath queries
-var gchild = xmlDoc.<span class="apidocCodeKeywordSpan">get</span>(&#x27;//grandchild&#x27;);
+var gchild = xmlDoc.<span class="apidocCodeKeywordSpan">get</span>('//grandchild');
 
-console.log(gchild.text());  // prints &#x22;grandchild content&#x22;
+console.log(gchild.text());  // prints "grandchild content"
 
 var children = xmlDoc.root().childNodes();
 var child = children[0];
 
-console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
+console.log(child.attr('foo').value()); // prints "bar"
 ...</pre></li>
     </ul>
 
@@ -5126,19 +5119,19 @@ console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function text() { [native code] }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-           &#x27;&#x3c;/root&#x3e;&#x27;;
+           '&lt;/root&gt;';
 
 var xmlDoc = libxmljs.parseXml(xml);
 
 // xpath queries
-var gchild = xmlDoc.get(&#x27;//grandchild&#x27;);
+var gchild = xmlDoc.get('//grandchild');
 
-console.log(gchild.<span class="apidocCodeKeywordSpan">text</span>());  // prints &#x22;grandchild content&#x22;
+console.log(gchild.<span class="apidocCodeKeywordSpan">text</span>());  // prints "grandchild content"
 
 var children = xmlDoc.root().childNodes();
 var child = children[0];
 
-console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
+console.log(child.attr('foo').value()); // prints "bar"
 ```
 ...</pre></li>
     </ul>
@@ -5170,9 +5163,9 @@ console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
     <li>example usage<pre class="apidocCodePre">...
 
 
-var events = require(&#x27;events&#x27;);
+var events = require('events');
 
-var bindings = require(&#x27;./bindings&#x27;);
+var bindings = require('./bindings');
 
 var SaxParser = function(callbacks) {
 var parser = new bindings.<span class="apidocCodeKeywordSpan">SaxParser</span>();
@@ -5245,15 +5238,15 @@ return parser;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function Text(doc, content) {
     if (!doc) {
-        throw new Error(&#x27;document argument required&#x27;);
+        throw new Error('document argument required');
     }
 
     if (!(doc instanceof bindings.Document)) {
-        throw new Error(&#x27;document argument must be an instance of Document&#x27;);
+        throw new Error('document argument must be an instance of Document');
     }
 
     if (!content) {
-        throw new Error(&#x27;content argument required&#x27;);
+        throw new Error('content argument required');
     }
 
     return new bindings.Text(doc, content);
@@ -5316,19 +5309,19 @@ return parser;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function text() { [native code] }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-           &#x27;&#x3c;/root&#x3e;&#x27;;
+           '&lt;/root&gt;';
 
 var xmlDoc = libxmljs.parseXml(xml);
 
 // xpath queries
-var gchild = xmlDoc.get(&#x27;//grandchild&#x27;);
+var gchild = xmlDoc.get('//grandchild');
 
-console.log(gchild.<span class="apidocCodeKeywordSpan">text</span>());  // prints &#x22;grandchild content&#x22;
+console.log(gchild.<span class="apidocCodeKeywordSpan">text</span>());  // prints "grandchild content"
 
 var children = xmlDoc.root().childNodes();
 var child = children[0];
 
-console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
+console.log(child.attr('foo').value()); // prints "bar"
 ```
 ...</pre></li>
     </ul>
@@ -5403,19 +5396,19 @@ console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function text() { [native code] }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-           &#x27;&#x3c;/root&#x3e;&#x27;;
+           '&lt;/root&gt;';
 
 var xmlDoc = libxmljs.parseXml(xml);
 
 // xpath queries
-var gchild = xmlDoc.get(&#x27;//grandchild&#x27;);
+var gchild = xmlDoc.get('//grandchild');
 
-console.log(gchild.<span class="apidocCodeKeywordSpan">text</span>());  // prints &#x22;grandchild content&#x22;
+console.log(gchild.<span class="apidocCodeKeywordSpan">text</span>());  // prints "grandchild content"
 
 var children = xmlDoc.root().childNodes();
 var child = children[0];
 
-console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
+console.log(child.attr('foo').value()); // prints "bar"
 ```
 ...</pre></li>
     </ul>
@@ -5505,9 +5498,9 @@ console.log(child.attr(&#x27;foo&#x27;).value()); // prints &#x22;bar&#x22;
     <li>example usage<pre class="apidocCodePre">...
 
 
-var events = require(&#x27;events&#x27;);
+var events = require('events');
 
-var bindings = require(&#x27;./bindings&#x27;);
+var bindings = require('./bindings');
 
 var SaxParser = function(callbacks) {
 var parser = new bindings.<span class="apidocCodeKeywordSpan">SaxParser</span>();
@@ -5679,8 +5672,8 @@ return parser;
     opts = opts || {};
 
     // if for some reason user did not specify an object for the options
-    if (typeof(opts) !== &#x27;object&#x27;) {
-        throw new Error(&#x27;fromHtml options must be an object&#x27;);
+    if (typeof(opts) !== 'object') {
+        throw new Error('fromHtml options must be an object');
     }
 
     return bindings.fromHtml(string, opts);
@@ -5706,8 +5699,8 @@ return parser;
     opts = opts || {};
 
     // if for some reason user did not specify an object for the options
-    if (typeof(opts) !== &#x27;object&#x27;) {
-        throw new Error(&#x27;fromHtmlFragment options must be an object&#x27;);
+    if (typeof(opts) !== 'object') {
+        throw new Error('fromHtmlFragment options must be an object');
     }
 
     opts.doctype = false;
@@ -5736,19 +5729,19 @@ return parser;
     return bindings.fromXml(string, options || {});
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-           &#x27;&#x3c;root&#x3e;&#x27; +
-               &#x27;&#x3c;child foo=&#x22;bar&#x22;&#x3e;&#x27; +
-                   &#x27;&#x3c;grandchild baz=&#x22;fizbuzz&#x22;&#x3e;grandchild content&#x3c;/grandchild&#x3e;&#x27; +
-               &#x27;&#x3c;/child&#x3e;&#x27; +
-               &#x27;&#x3c;sibling&#x3e;with content!&#x3c;/sibling&#x3e;&#x27; +
-           &#x27;&#x3c;/root&#x3e;&#x27;;
+           '&lt;root&gt;' +
+               '&lt;child foo="bar"&gt;' +
+                   '&lt;grandchild baz="fizbuzz"&gt;grandchild content&lt;/grandchild&gt;' +
+               '&lt;/child&gt;' +
+               '&lt;sibling&gt;with content!&lt;/sibling&gt;' +
+           '&lt;/root&gt;';
 
 var xmlDoc = libxmljs.<span class="apidocCodeKeywordSpan">parseXml</span>(xml);
 
 // xpath queries
-var gchild = xmlDoc.get(&#x27;//grandchild&#x27;);
+var gchild = xmlDoc.get('//grandchild');
 
-console.log(gchild.text());  // prints &#x22;grandchild content&#x22;
+console.log(gchild.text());  // prints "grandchild content"
 
 var children = xmlDoc.root().childNodes();
 ...</pre></li>
@@ -5781,9 +5774,9 @@ var children = xmlDoc.root().childNodes();
     <li>example usage<pre class="apidocCodePre">...
 
 
-var events = require(&#x27;events&#x27;);
+var events = require('events');
 
-var bindings = require(&#x27;./bindings&#x27;);
+var bindings = require('./bindings');
 
 var SaxParser = function(callbacks) {
 var parser = new bindings.<span class="apidocCodeKeywordSpan">SaxParser</span>();
@@ -5844,3 +5837,4 @@ return parser;
     ]
 </div>
 </div>
+</body></html>
