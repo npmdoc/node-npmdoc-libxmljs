@@ -1,4 +1,7 @@
-# api documentation for  [libxmljs (v0.18.4)](https://github.com/libxmljs/libxmljs)  [![npm package](https://img.shields.io/npm/v/npmdoc-libxmljs.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-libxmljs) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-libxmljs.svg)](https://travis-ci.org/npmdoc/node-npmdoc-libxmljs)
+# npmdoc-libxmljs
+
+#### basic api documentation for  [libxmljs (v0.18.4)](https://github.com/libxmljs/libxmljs)  [![npm package](https://img.shields.io/npm/v/npmdoc-libxmljs.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-libxmljs) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-libxmljs.svg)](https://travis-ci.org/npmdoc/node-npmdoc-libxmljs)
+
 #### libxml bindings for v8 javascript engine
 
 [![NPM](https://nodei.co/npm/libxmljs.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/libxmljs)
@@ -77,7 +80,8 @@
         "install": "node-pre-gyp install --fallback-to-build --loglevel http",
         "test": "node --expose_gc ./node_modules/.bin/nodeunit test"
     },
-    "version": "0.18.4"
+    "version": "0.18.4",
+    "bin": {}
 }
 ```
 
